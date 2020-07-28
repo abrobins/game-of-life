@@ -5,6 +5,7 @@ import styled from "styled-components";
 const OutsideContainer = styled.div`
   background-color: #d2d9d5;
   border-radius: 3px;
+  padding: 5px;
 `;
 
 const ButtonContainer = styled.div`
@@ -167,6 +168,8 @@ function GridLayout() {
         <h2> Generation: {generation}</h2>
         <h2> Number of Active Cells: {sum}</h2>
       </Counter>
+      <h3>Conway's Game of Life Rules</h3>
+      <p>Testing rules....</p>
     </OutsideContainer>
   );
 }
