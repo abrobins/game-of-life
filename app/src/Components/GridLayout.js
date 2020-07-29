@@ -163,6 +163,30 @@ function GridLayout() {
         >
           {!runningRef.current ? "Start" : "Stop"}
         </Button>
+        {/* set new grid randomly */}
+        <Button
+          onClick={() => {
+            const rows = [];
+            for (let i = 0; i < numRows; i++) {
+              rows.push(
+                Array.from(Array(numCols), () => (Math.random() > 0.7 ? 1 : 0))
+              );
+            }
+            setGrid(rows);
+          }}
+        >
+          Random
+        </Button>
+        {/* clear board */}
+        <Button
+          onClick={() => {
+            setGrid(initialState);
+            setGeneration(0);
+            setSum(0);
+          }}
+        >
+          Reset
+        </Button>
       </ButtonContainer>
       <Counter>
         <h2> Generation: {generation}</h2>
