@@ -1,7 +1,6 @@
 import React from "react";
 import GridLayout from "./Components/GridLayout";
 import styled from "styled-components";
-import logo from "./logo.svg";
 import "./App.css";
 
 const Layout = styled.div`
