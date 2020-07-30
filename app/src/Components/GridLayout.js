@@ -173,6 +173,34 @@ function GridLayout() {
         >
           Random
         </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            timeRef.current = 2;
+          }}
+        >
+          Faster
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            timeRef.current = 250;
+          }}
+        >
+          Normal Speed
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            timeRef.current = 500;
+          }}
+        >
+          Slower
+        </Button>
+
         {/* clear board */}
         <Button
           variant="contained"
