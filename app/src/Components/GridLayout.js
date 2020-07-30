@@ -188,7 +188,20 @@ function GridLayout() {
         <h2> Number of Active Cells: {sum}</h2>
       </Counter>
       <h3>Conway's Game of Life Rules</h3>
-      <p>Testing rules....</p>
+      <p>
+        In the Game of Life, the following rules should help to understand the
+        goal of the game:
+      </p>
+      <ul>
+        <li>
+          If the cell is alive and has 2 or 3 neighbors, then it remains alive.
+          Otherwise it dies.
+        </li>
+        <li>
+          If the cell is dead and has exactly 3 neighbors, then it comes back to
+          life. Otherwise it remains dead.
+        </li>
+      </ul>
     </OutsideContainer>
   );
 }
