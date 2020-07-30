@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useRef } from "react";
 import produce from "immer";
 import styled from "styled-components";
+import Button from "@material-ui/core/Button";
 
 const OutsideContainer = styled.div`
   background-color: #d2d9d5;
@@ -14,18 +15,6 @@ const ButtonContainer = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   padding: 5px;
-`;
-
-const Button = styled.button`
-  color: black;
-  margin-top: 10px;
-  width: 8vw;
-  height: 40px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bolder;
-  background-color: #add8e6;
 `;
 
 const Counter = styled.div`
@@ -153,6 +142,8 @@ function GridLayout() {
       </div>
       <ButtonContainer>
         <Button
+          variant="contained"
+          color="primary"
           onClick={() => {
             setrunning(!running);
             if (!running) {
@@ -165,6 +156,8 @@ function GridLayout() {
         </Button>
         {/* set new grid randomly */}
         <Button
+          variant="contained"
+          color="primary"
           onClick={() => {
             const rows = [];
             for (let i = 0; i < numRows; i++) {
@@ -179,6 +172,8 @@ function GridLayout() {
         </Button>
         {/* clear board */}
         <Button
+          variant="contained"
+          color="primary"
           onClick={() => {
             setGrid(initialState);
             setGeneration(0);
