@@ -36,10 +36,13 @@ const neighbor_operations = [
 
 function GridLayout() {
   const [running, setrunning] = useState(false);
+  // useRef allows us to hold mutable value in .current so we can toggle whether grid is "running" or not
   const runningRef = useRef(running);
   const [generation, setGeneration] = useState(0);
+  // allows us to toggle speed of grid rendering
   const timeRef = useRef(200);
   const [sum, setSum] = useState(0);
+  // default size of grid
   const numRows = 35;
   const numCols = 80;
 

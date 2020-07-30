@@ -8,12 +8,13 @@ const Layout = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #33caff;
-  height: 100vh;
+  height: 150vh;
 `;
 
 function App() {
   return (
     <Layout>
+      <h1>Conway's Game of Life</h1>
       <GridLayout></GridLayout>
     </Layout>
   );
