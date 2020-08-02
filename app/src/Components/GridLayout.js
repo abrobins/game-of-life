@@ -40,7 +40,7 @@ function GridLayout() {
   const runningRef = useRef(running);
   const [generation, setGeneration] = useState(0);
   // allows us to toggle speed of grid rendering
-  const timeRef = useRef(200);
+  const timeRef = useRef(250);
   const [sum, setSum] = useState(0);
   // default size of grid
   const numRows = 35;
@@ -130,12 +130,11 @@ function GridLayout() {
                 //changing background depending on amount of cells
                 backgroundColor:
                   grid[i][k] && sum > 200
-                    ? // ? _.sample(colors)
-                      "#7044FF"
+                    ? "#7044FF"
                     : grid[i][k] && sum > 100
                     ? "#4666FF"
                     : grid[i][k] && sum >= 0
-                    ? "#FE000D"
+                    ? "#33caff"
                     : undefined,
                 border: "1px solid black",
               }}
