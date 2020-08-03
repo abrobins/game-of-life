@@ -20,7 +20,7 @@ const ButtonContainer = styled.div`
 const Counter = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
 `;
 
 const neighbor_operations = [
@@ -214,8 +214,12 @@ function GridLayout() {
         </Button>
       </ButtonContainer>
       <Counter>
-        <h2> Generation: {generation}</h2>
-        <h2> Number of Active Cells: {sum}</h2>
+        <p>
+          <h2> Generation: {generation}</h2>
+        </p>
+        <p>
+          <h2> Number of Active Cells: {sum}</h2>
+        </p>
       </Counter>
       <h3>Conway's Game of Life Rules</h3>
       <p>
@@ -232,6 +236,19 @@ function GridLayout() {
           life. Otherwise it remains dead.
         </li>
       </ul>
+      {/* <h3>Cellular Automata</h3>
+      <p>
+        A cellular automata is a computer application that typically performs
+        operations typically based on a 2D grid. Rules describe how the grid
+        changes over time, typically based on the cell's neighbors.
+      </p>
+      <h3>Turing Complete</h3>
+      <p>
+        An application is determined to be turing complete if it's able to
+        compute a general computation. Given a large enough grid, this Game of
+        Life app could compute anything that is computable. However, this is not
+        practical which is why we have programming languages.
+      </p> */}
     </OutsideContainer>
   );
 }
